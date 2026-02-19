@@ -12,7 +12,7 @@ const AdminDashboard = () => {
     const [isRoomModalOpen, setIsRoomModalOpen] = useState(false);
     const [editingRoom, setEditingRoom] = useState(null);
 
-    const API_URL = 'http://localhost:5000/api';
+    const API_URL = import.meta.env.VITE_API_URL || '/api';
     const token = localStorage.getItem('token');
 
     useEffect(() => {
