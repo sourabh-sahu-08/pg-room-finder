@@ -9,11 +9,10 @@ This is the backend API for the Basera PG Room Finder application.
 
 ## Installation
 
-1. Navigate to the server directory:
+1. Navigate to the backend directory:
    
-```
-bash
-   cd server
+```bash
+   cd backend
    
 ```
 
@@ -94,3 +93,12 @@ curl "http://localhost:5000/api/rooms?location=Bilaspur"
 
 # Search rooms
 curl "http://localhost:5000/api/rooms?search=PG"
+
+## Deployment
+
+When deploying the backend (e.g., to Render, Railway, or Heroku):
+
+1. Set the `MONGODB_URI` environment variable to your production database URL (e.g., MongoDB Atlas).
+2. Set `NODE_ENV=production`.
+3. The `PORT` will usually be assigned automatically by the platform, but you can override it if needed.
+4. Ensure that the frontend's production URL is allowed by CORS if you are not using a proxy.
